@@ -1,0 +1,25 @@
+public class BankAccount {
+    private double balance;
+    public BankAccount(double IBalance) {
+        balance = IBalance;
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public void deposit(double amount) {
+        if(amount > 0) {
+            balance += amount;
+            System.out.println("Deposite Successful.");
+        } else {
+            System.out.println("Invalid Deposit. ");
+        }
+    }
+    public void withdraw(double amount) {
+        if(amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrawal sucessfull");
+        } else {
+            System.out.println("Insufficient amount");
+        }
+    }
+}
